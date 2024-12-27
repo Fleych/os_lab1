@@ -56,10 +56,9 @@ int main() {
 		{
 			if (errno == EINTR)
 			{
-				printf("Got SIGHUP\n");
 				if (wasSigHup) {
 					wasSigHup = 0;
-					printf("SIGHUP is processed\n");
+					printf("SIGHUP is received\n");
 				}
 				continue;
 			}
